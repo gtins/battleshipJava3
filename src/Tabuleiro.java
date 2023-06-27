@@ -16,7 +16,6 @@ public class Tabuleiro {
         }
 
     }
-
     public void posicionar(int tamanho, int linha, int coluna, boolean horizontal){
         Embarcacoes navio = new Embarcacoes(tamanho, linha, coluna, horizontal);
 
@@ -27,7 +26,7 @@ public class Tabuleiro {
                 tela[linha + i][coluna] = 'E';
             }
         }
-        imprimir();
+        //imprimir();
     }
     public void imprimir(){
         for (int i = 0; i < tamanho; i++){
