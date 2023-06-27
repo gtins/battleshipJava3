@@ -3,6 +3,7 @@ public class Embarcacoes {
     protected int linha;
     protected int coluna;
     protected boolean horizontal;
+    //protected String caractere;
 
     Embarcacoes(int tamanho, int linha, int coluna, boolean horizontal){
         this.tamanho = tamanho;
@@ -23,8 +24,8 @@ public class Embarcacoes {
         return coluna;
     }
 
-    public boolean isHorizontal() {
-        return horizontal;
-    }
+//    public String getCaractere() {
+//        return caractere;
+//    }
 
 }

@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Tabuleiro {
     private char[][] tela;
     private Embarcacoes[] barcos; //teste para armazenar barcos
@@ -27,7 +25,7 @@ public class Tabuleiro {
                 tela[linha + i][coluna] = 'E';
             }
             barcos[i] = navio; //cada navio criado é armazenado no array
-            System.out.println(barcos[i].getTamanho());
+            //System.out.println(barcos[i].getTamanho());
         }
 //        for (int i = 0; i < barcos.length; i++)
 //        System.out.println(barcos[i].getTamanho());
@@ -39,6 +37,21 @@ public class Tabuleiro {
                 System.out.print(tela[i][j]+ " ");
             }
             System.out.println();
+        }
+    }
+
+    public boolean acertou(int lin, int col){
+        if (tela[lin][col] == 'E'){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public void atualizaTabuleiro(int lin, int col, boolean acertou){
+        if (acertou){
+            tela[lin][col] = 'X';
+        } else {
+            tela [lin][col] = 'O';
         }
     }
 
