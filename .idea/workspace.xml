@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tabuleiro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687818099625</updated>
       <workItem from="1687826520661" duration="35000" />
-      <workItem from="1687826577257" duration="4463000" />
+      <workItem from="1687826577257" duration="5549000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1687818191006</created>
@@ -90,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687830999621</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="tirei o imprimir de dentro do escopo do posicionar, estava retornando duas vezes o tabuleiro">
+      <created>1687831277913</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687831277913</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +109,7 @@
     <MESSAGE value="imprimir tabuleiro feito" />
     <MESSAGE value="tirei o for inutil" />
     <MESSAGE value="posicionamento feito" />
-    <option name="LAST_COMMIT_MESSAGE" value="posicionamento feito" />
+    <MESSAGE value="tirei o imprimir de dentro do escopo do posicionar, estava retornando duas vezes o tabuleiro" />
+    <option name="LAST_COMMIT_MESSAGE" value="tirei o imprimir de dentro do escopo do posicionar, estava retornando duas vezes o tabuleiro" />
   </component>
 </project>
