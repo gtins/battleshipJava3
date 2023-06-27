@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tabuleiro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687818099625</updated>
       <workItem from="1687826520661" duration="35000" />
-      <workItem from="1687826577257" duration="2507000" />
+      <workItem from="1687826577257" duration="3036000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1687818191006</created>
@@ -69,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687828654993</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="imprimir tabuleiro feito">
+      <created>1687829226114</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687829226114</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,6 +84,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit inicial" />
     <MESSAGE value="tabuleiro feito" />
-    <option name="LAST_COMMIT_MESSAGE" value="tabuleiro feito" />
+    <MESSAGE value="imprimir tabuleiro feito" />
+    <option name="LAST_COMMIT_MESSAGE" value="imprimir tabuleiro feito" />
   </component>
 </project>
