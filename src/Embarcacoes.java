@@ -4,9 +4,7 @@ public class Embarcacoes {
     protected int coluna;
     protected boolean horizontal;
 
-    protected Tabuleiro tabuleiro;
-
-    void Coordenada(String tipo, int linha, int coluna, char letra, char direcao){
+    Embarcacoes(int tamanho, int linha, int coluna, char letra, char direcao){
         this.tamanho = tamanho;
         this.linha = linha;
         this.coluna = coluna;
