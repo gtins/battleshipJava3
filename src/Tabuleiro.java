@@ -21,8 +21,13 @@ public class Tabuleiro {
     public void posicionar(Embarcacoes barcos){
 
     }
-    public void Imprimir(){
-
+    public void imprimir(){
+        for (int i = 0; i < tamanho; i++){
+            for (int j = 0; j < tamanho; j++){
+                System.out.print(tela[i][j]+ " ");
+            }
+            System.out.println();
+        }
     }
 
 }
