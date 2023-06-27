@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Tabuleiro {
     private char[][] tela;
-    //private Embarcacoes [] barcos;
+    private Embarcacoes[] barcos; //teste para armazenar barcos
     private int tamanho;
     public Tabuleiro(int tamanho){ //descobri isso sem querer
         this.tamanho = tamanho;
@@ -17,15 +17,20 @@ public class Tabuleiro {
 
     }
     public void posicionar(int tamanho, int linha, int coluna, boolean horizontal){
+        barcos = new Embarcacoes[5];
         Embarcacoes navio = new Embarcacoes(tamanho, linha, coluna, horizontal);
 
-        for (int i = 0; i < Embarcacoes.getTamanho(); i++){
-            if (horizontal == true){
+        for (int i = 0; i < Embarcacoes.getTamanho(); i++){ //5 provisorio, preciso ver um jeito de ficar melhor
+            if (horizontal){
                 tela[linha][coluna + i] = 'E'; //mudar para o caractere
             } else {
                 tela[linha + i][coluna] = 'E';
             }
+            barcos[i] = navio; //cada navio criado é armazenado no array
+            System.out.println(barcos[i].getTamanho());
         }
+//        for (int i = 0; i < barcos.length; i++)
+//        System.out.println(barcos[i].getTamanho());
         //imprimir();
     }
     public void imprimir(){
