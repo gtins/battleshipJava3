@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="">
+    <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="posicionamento dinamico funcionando">
+      <change afterPath="$PROJECT_DIR$/src/br/org/catolicasc/client/GreetClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/org/catolicasc/server/GreetServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tabuleiro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Ícaro/IdeaProjects/BatalhaNaval2/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,6 +46,53 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ícaro\IdeaProjects\BatalhaNaval2\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.GreetClient">
+    <configuration name="GreetClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.org.catolicasc.client.GreetClient" />
+      <module name="BatalhaNaval2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.org.catolicasc.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreetServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.org.catolicasc.server.GreetServer" />
+      <module name="BatalhaNaval2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.org.catolicasc.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="BatalhaNaval2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GreetClient" />
+        <item itemvalue="Application.GreetServer" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +103,8 @@
       <updated>1687818099625</updated>
       <workItem from="1687826520661" duration="35000" />
       <workItem from="1687826577257" duration="6479000" />
+      <workItem from="1687904315879" duration="943000" />
+      <workItem from="1687905664757" duration="389000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1687818191006</created>
@@ -110,6 +160,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit inicial" />
