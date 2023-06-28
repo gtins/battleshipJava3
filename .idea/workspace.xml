@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="posicionamento dinamico funcionando">
-      <change afterPath="$PROJECT_DIR$/src/br/org/catolicasc/client/GreetClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/org/catolicasc/server/GreetServer.java" afterDir="false" />
+    <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="teste oi">
+      <change afterPath="$PROJECT_DIR$/src/tech/icaro/GuessTheNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tech/icaro/Host.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tech/icaro/business/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tech/icaro/business/NumberGuesser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tech/icaro/cli/CommandLineInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tech/icaro/network/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tech/icaro/network/Network.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tech/icaro/network/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/org/catolicasc/client/GreetClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/org/catolicasc/server/GreetServer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,25 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Ícaro/IdeaProjects/BatalhaNaval2/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ícaro/IdeaProjects/BatalhaNaval2/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ícaro\IdeaProjects\BatalhaNaval2\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GreetClient">
+  <component name="RunManager" selected="Application.Host">
     <configuration name="GreetClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.org.catolicasc.client.GreetClient" />
       <module name="BatalhaNaval2" />
@@ -78,6 +88,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Host" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tech.icaro.Host" />
+      <module name="BatalhaNaval2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.icaro.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="BatalhaNaval2" />
@@ -87,9 +110,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GreetClient" />
-        <item itemvalue="Application.GreetServer" />
+        <item itemvalue="Application.Host" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GreetServer" />
+        <item itemvalue="Application.GreetClient" />
       </list>
     </recent_temporary>
   </component>
@@ -104,7 +128,7 @@
       <workItem from="1687826520661" duration="35000" />
       <workItem from="1687826577257" duration="6479000" />
       <workItem from="1687904315879" duration="943000" />
-      <workItem from="1687905664757" duration="389000" />
+      <workItem from="1687905664757" duration="4462000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1687818191006</created>
@@ -155,7 +179,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687832278131</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="primeiro etapa server e cliente">
+      <created>1687906083723</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687906083723</updated>
+    </task>
+    <task id="LOCAL-00009" summary="teste oi">
+      <created>1687907075160</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687907075160</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +218,8 @@
     <MESSAGE value="posicionamento feito" />
     <MESSAGE value="tirei o imprimir de dentro do escopo do posicionar, estava retornando duas vezes o tabuleiro" />
     <MESSAGE value="posicionamento dinamico funcionando" />
-    <option name="LAST_COMMIT_MESSAGE" value="posicionamento dinamico funcionando" />
+    <MESSAGE value="primeiro etapa server e cliente" />
+    <MESSAGE value="teste oi" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste oi" />
   </component>
 </project>
