@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="existe um erro presente referente ao start do game aqui">
+    <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="add notNull">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tech/icaro/business/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/icaro/business/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatalhaNaval2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BatalhaNaval2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tech/icaro/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/icaro/Host.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -90,7 +95,7 @@
       <workItem from="1687826520661" duration="35000" />
       <workItem from="1687826577257" duration="6479000" />
       <workItem from="1687904315879" duration="943000" />
-      <workItem from="1687905664757" duration="4681000" />
+      <workItem from="1687905664757" duration="5237000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1687818191006</created>
@@ -162,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687911172514</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add notNull">
+      <created>1687911447871</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687911447871</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +203,7 @@
     <MESSAGE value="teste oi" />
     <MESSAGE value="retirei o modelo que o professor indicou e comecei a inserir o novo" />
     <MESSAGE value="existe um erro presente referente ao start do game aqui" />
-    <option name="LAST_COMMIT_MESSAGE" value="existe um erro presente referente ao start do game aqui" />
+    <MESSAGE value="add notNull" />
+    <option name="LAST_COMMIT_MESSAGE" value="add notNull" />
   </component>
 </project>

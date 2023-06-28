@@ -12,7 +12,6 @@ public class Host {
         } else if (args.length == 1) {  // servidor (porta)
             game = new Game(Integer.parseInt(args[0]));
         }
-
         game.run();
         System.out.println("Hello world!");
     }
