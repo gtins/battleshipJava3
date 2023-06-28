@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Tabuleiro Tabuleiro = new Tabuleiro(10);
+        Tabuleiro tabuleiro = new Tabuleiro(10);
         Embarcacoes[] barcos = new Embarcacoes[5];
         int i = 0;
 
@@ -16,23 +16,22 @@ public class Main {
             int coluna = Integer.parseInt(scanner.nextLine());
             System.out.printf("Horizontal? (true ou false): ");
             boolean horizontal = Boolean.parseBoolean(scanner.nextLine());
-            Tabuleiro.posicionar(tamanho, linha, coluna, horizontal);
-            Tabuleiro.imprimir();
+            tabuleiro.posicionar(tamanho, linha, coluna, horizontal);
+            tabuleiro.imprimir();
         }
-        while (i <10){
-            System.out.print("Digite seu palpite: (linha, coluna): ");
-            int lin = scanner.nextInt();
-            int col = scanner.nextInt();
-
-            if(Tabuleiro.acertou(lin, col)) {
-                Tabuleiro.atualizaTabuleiro(lin, col, true);
-                System.out.println("Acertou!");
-            } else {
-                Tabuleiro.atualizaTabuleiro(lin, col, false);
-                System.out.println("Errou!");
-            }
-            Tabuleiro.imprimir();
-            i++;
-        }
+//        while (!tabuleiro.jogoAcabou()){
+//            System.out.print("Digite seu palpite: (linha, coluna): ");
+//            int lin = scanner.nextInt();
+//            int col = scanner.nextInt();
+//
+//            if(tabuleiro.acertou(lin, col)) {
+//                tabuleiro.atualizaTabuleiro(lin, col, true);
+//                System.out.println("Acertou!");
+//            } else {
+//                tabuleiro.atualizaTabuleiro(lin, col, false);
+//                System.out.println("Errou!");
+//            }
+//            tabuleiro.imprimir();
+//        }
     }
 }

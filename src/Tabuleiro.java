@@ -1,15 +1,15 @@
 public class Tabuleiro {
-    private char[][] tela;
+    private Embarcacoes[][] tela;
     private Embarcacoes[] barcos; //teste para armazenar barcos
     private int tamanho;
     public Tabuleiro(int tamanho){ //descobri isso sem querer
         this.tamanho = tamanho;
-        this.tela = new char[tamanho][tamanho];  //constroi o tabuleiro vazio
+        this.tela = new Embarcacoes[tamanho][tamanho];  //constroi o tabuleiro vazio
 
         //loop para o tabuleiro
         for (int i = 0; i < tamanho; i++){
             for (int j = 0; j < tamanho; j++){
-                tela[i][j] = '-'; //matriz vazia
+                tela[i][j] = null; //matriz vazia
             }
         }
 
@@ -18,11 +18,11 @@ public class Tabuleiro {
         barcos = new Embarcacoes[5];
         Embarcacoes navio = new Embarcacoes(tamanho, linha, coluna, horizontal);
 
-        for (int i = 0; i < Embarcacoes.getTamanho(); i++){ //5 provisorio, preciso ver um jeito de ficar melhor
+        for (int i = 0; i < navio.getTamanho(); i++){ //5 provisorio, preciso ver um jeito de ficar melhor
             if (horizontal){
-                tela[linha][coluna + i] = 'E'; //mudar para o caractere
+                tela[linha][coluna + i] = navio; //mudar para o caractere
             } else {
-                tela[linha + i][coluna] = 'E';
+                tela[linha + i][coluna] = navio;
             }
             barcos[i] = navio; //cada navio criado é armazenado no array
             //System.out.println(barcos[i].getTamanho());
@@ -34,14 +34,14 @@ public class Tabuleiro {
     public void imprimir(){
         for (int i = 0; i < tamanho; i++){
             for (int j = 0; j < tamanho; j++){
-                System.out.print(tela[i][j]+ " ");
+                System.out.print(tela[i][j].toString()+ " ");
             }
             System.out.println();
         }
     }
 
     public boolean acertou(int lin, int col){
-        if (tela[lin][col] == 'E'){
+        if (tela[lin][col] != null){
             return true;
         } else {
             return false;
@@ -49,10 +49,18 @@ public class Tabuleiro {
     }
     public void atualizaTabuleiro(int lin, int col, boolean acertou){
         if (acertou){
-            tela[lin][col] = 'X';
+            tela[lin][col].toString();
         } else {
-            tela [lin][col] = 'O';
+            tela [lin][col].toString();
         }
+    }
+    public boolean jogoAcabou() {
+        for (Embarcacoes navio : barcos) {
+            if (navio != null && !navio.afundou()) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
