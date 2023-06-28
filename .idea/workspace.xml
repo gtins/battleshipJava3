@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="teste oi">
-      <change afterPath="$PROJECT_DIR$/src/tech/icaro/GuessTheNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tech/icaro/Host.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tech/icaro/business/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tech/icaro/business/NumberGuesser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tech/icaro/cli/CommandLineInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tech/icaro/network/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tech/icaro/network/Network.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tech/icaro/network/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b933f723-4f4e-4ecc-a916-8dd85f4762c3" name="Changes" comment="existe um erro presente referente ao start do game aqui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/org/catolicasc/client/GreetClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/org/catolicasc/server/GreetServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tech/icaro/business/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tech/icaro/business/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,51 +32,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ícaro/IdeaProjects/BatalhaNaval2/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "last_opened_file_path": "C:/Users/Ícaro/IdeaProjects/BatalhaNaval2/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ícaro\IdeaProjects\BatalhaNaval2\src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Host">
-    <configuration name="GreetClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.org.catolicasc.client.GreetClient" />
-      <module name="BatalhaNaval2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.org.catolicasc.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GreetServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.org.catolicasc.server.GreetServer" />
-      <module name="BatalhaNaval2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.org.catolicasc.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Host" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tech.icaro.Host" />
       <module name="BatalhaNaval2" />
@@ -112,8 +76,6 @@
       <list>
         <item itemvalue="Application.Host" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.GreetServer" />
-        <item itemvalue="Application.GreetClient" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +90,7 @@
       <workItem from="1687826520661" duration="35000" />
       <workItem from="1687826577257" duration="6479000" />
       <workItem from="1687904315879" duration="943000" />
-      <workItem from="1687905664757" duration="4462000" />
+      <workItem from="1687905664757" duration="4681000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1687818191006</created>
@@ -193,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687907075160</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="retirei o modelo que o professor indicou e comecei a inserir o novo">
+      <created>1687911172514</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687911172514</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +189,8 @@
     <MESSAGE value="posicionamento dinamico funcionando" />
     <MESSAGE value="primeiro etapa server e cliente" />
     <MESSAGE value="teste oi" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste oi" />
+    <MESSAGE value="retirei o modelo que o professor indicou e comecei a inserir o novo" />
+    <MESSAGE value="existe um erro presente referente ao start do game aqui" />
+    <option name="LAST_COMMIT_MESSAGE" value="existe um erro presente referente ao start do game aqui" />
   </component>
 </project>

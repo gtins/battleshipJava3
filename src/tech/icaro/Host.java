@@ -1,9 +1,10 @@
 package tech.icaro;
 
+import org.jetbrains.annotations.NotNull;
 import tech.icaro.business.Game;
 
 public class Host {
-    public static void main(String[] args) {
+    public static void main(String @NotNull [] args) {
         Game game;
 
         if (args.length == 2) {  // cliente (ip e porta)
