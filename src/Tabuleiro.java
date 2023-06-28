@@ -12,7 +12,8 @@ public class Tabuleiro {
                 tela[i][j] = null; //matriz vazia
             }
         }
-
+//sera necessario criar a classe agua, "encher o tabuleiro de agua", criando uma classe agua que construir
+//uma embarcacao falsa, caracter = * e tudo mais sendo IGUAL a navio.
     }
     public void posicionar(int tamanho, int linha, int coluna, boolean horizontal){
         barcos = new Embarcacoes[5];
