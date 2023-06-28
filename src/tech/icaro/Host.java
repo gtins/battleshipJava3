@@ -16,3 +16,4 @@ public class Host {
         System.out.println("Hello world!");
     }
 }
+// esse cara vai para a main do jogo
