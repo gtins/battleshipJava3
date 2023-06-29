@@ -1,13 +1,12 @@
-public class Embarcacoes extends Elemento {
+public class Agua extends Elemento {
 
-
-    Embarcacoes(int tamanho, int linha, int coluna, boolean horizontal){
+    Agua(int tamanho, int linha, int coluna, boolean horizontal){
         this.tamanho = tamanho;
         this.linha = linha;
         this.coluna = coluna;
         this.horizontal = horizontal;
         this.acertos = 0;
-        caractere = 'E';
+        caractere = '*';
     }
 
     public int getTamanho() {

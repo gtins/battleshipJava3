@@ -1,21 +1,26 @@
 public class Tabuleiro {
-    private Embarcacoes[][] tela;
+    private Elemento[][] tela;
+    private Elemento[][] mar;
     private Embarcacoes[] barcos; //teste para armazenar barcos
     private int tamanho;
-    public Tabuleiro(int tamanho){ //descobri isso sem querer
+    public Tabuleiro(int tamanho, int linha, int coluna, boolean horizontal){ //descobri isso sem querer
         this.tamanho = tamanho;
-        this.tela = new Embarcacoes[tamanho][tamanho];  //constroi o tabuleiro vazio
+        //constroi o tabuleiro vazio
+        mar = new Elemento[tamanho][tamanho];
+        Elemento oceano = new Agua(tamanho, linha, coluna, horizontal);
+        //Agua oceano = new Agua()
 
         //loop para o tabuleiro
         for (int i = 0; i < tamanho; i++){
             for (int j = 0; j < tamanho; j++){
-                tela[i][j] = null; //matriz vazia
+                mar[i][j] = oceano; //matriz vazia
             }
         }
 //sera necessario criar a classe agua, "encher o tabuleiro de agua", criando uma classe agua que construir
 //uma embarcacao falsa, caracter = * e tudo mais sendo IGUAL a navio.
     }
     public void posicionar(int tamanho, int linha, int coluna, boolean horizontal){
+        this.tela = new Embarcacoes[tamanho][tamanho];
         barcos = new Embarcacoes[5];
         Embarcacoes navio = new Embarcacoes(tamanho, linha, coluna, horizontal);
 
@@ -34,8 +39,13 @@ public class Tabuleiro {
     }
     public void imprimir(){
         for (int i = 0; i < tamanho; i++){
-            for (int j = 0; j < tamanho; j++){
-                System.out.print(tela[i][j].toString()+ " ");
+            for (int j = 0; j < tamanho ; j++) {
+                String letra = "K";
+                if (tela[i][j] == null) {
+                    letra = tela[i][j].toString();
+                }
+                System.out.print( letra + " ");
+                //System.out.print(tela[i][j].toString()+ " ");
             }
             System.out.println();
         }

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Tabuleiro tabuleiro = new Tabuleiro(10);
+        Tabuleiro tabuleiro = new Tabuleiro(10, 10,10,true);
         Embarcacoes[] barcos = new Embarcacoes[5];
         int i = 0;
 
