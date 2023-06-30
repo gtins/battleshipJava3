@@ -9,15 +9,15 @@ public class Embarcacao {
 
     public Embarcacao(int x, int y, int tamanho , String tipo, boolean horizontal) { // construtor de ibjetos embarcaçao
         //recebe os parametros de cordanadam, tamanho, tipo e orientaçao
-        posicionar(x, y, tamanho, horizontal);
         this.forca = tamanho; //decisao inteligente, o tipo é igual ao tamanho ainfal é o numero de celulas
         this.tipo = tipo; //tipo recebido vira o tipo
+        posicionar(x, y, tamanho, horizontal);
     }
 
     private void posicionar(int x, int y, int tamanho, boolean horizontal) { //precisa de x, y tamanho e orientaçao
         if(horizontal) {
             for (int i = 0; i < tamanho; i++) {
-                Cordenada cordenada = new Cordenada(x + i, y); //objeto do tipo cordenada de nome cordenada usa do construtor da cordenada IR PARA CORDENADA PARA ENTENDER
+                Cordenada cordenada = new Cordenada(x + i, y, tipo); //objeto do tipo cordenada de nome cordenada usa do construtor da cordenada IR PARA CORDENADA PARA ENTENDER
                 //IMPORTANTE, incremento no X afinal horizontal = eixo X
                 posicoes.put(cordenada.hashCode(), cordenada); //coloca dentro do objeto hashmap posicoes o hashcode do objeto cordenada recem criado como chave e a cordenada como valor.
                 //importante, o hashcode é a chave e o X e Y são os valores. ou seja um valor aponta pra um par ordenado
@@ -56,22 +56,37 @@ public class Embarcacao {
         if( acertou ) {//se acertou foi true
             diminuirForca(); //metodo de diminuir a vida logo abaixo, bem simples
         }
-        return forca; //retorna a força pós processamento, ou seja, reduzida
+        return forca;
         //VOLTA PRO MAIN
     }
 
+    /**
+     * retorna a força pós processamento, ou seja, reduzida
+     */
     private void diminuirForca() {
         forca--;
     }
 
+    /**
+     * Retorna TRUE se dentro do objeto hashmap posicoes existe a CHAVE igual ao hashcode de TIRO
+     * tiro é um objeto cordenada, que recebe o x e y do metodo que o invoca (acertou) e passa pelo construtor padrao de cordenada
+     * a logica de como a chave é adicionada em posicoes da em posicionar.
+     * basicamente compara, se forem os mesmos x e y isso aqui da true, se não não da
+     * retorna false se não tiver
+     * VOLTA PARA ATIRAR
+     * @param x como cordenada do array (linha)
+     * @param y como cordenada do array (coluna)
+     * @return true quando acertou
+     */
     public boolean acertou(int x, int y) {//método acertar recebe valores x e y
         Cordenada tiro = new Cordenada(x, y);//objeto do tipo cordenada de nome tipo, nova cordenada (com x e y do parametro acertou)
-        return posicoes.containsKey(tiro.hashCode());//retorna TRUE se dentro do objeto hashmap posicoes existe a CHAVE igual ao hashcode de TIRO
-        //tiro é um objeto cordenada, que recebe o x e y do metodo que o invoca (acertou) e passa pelo construtor padrao de cordenada
-        //a logica de como a chave é adicionada em posicoes da em posicionar.
-        //basicamente compara, se forem os mesmos x e y isso aqui da true, se não não da
-        //retorna false se não tiver
-        //VOLTA PARA ATIRAR
+        int chave = tiro.hashCode();
+        boolean acertou = posicoes.containsKey(chave);
+        if( acertou ) {
+            Cordenada elemento = posicoes.get(chave);
+            elemento.acertou();
+        }
+        return acertou;
     }
 
     public int getForca() {//getter da força
