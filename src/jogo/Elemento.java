@@ -1,3 +1,5 @@
+package jogo;
+
 public class Elemento {
     protected String tipo;
     protected int tamanho;

@@ -1,10 +1,12 @@
+package jogo;
+
 import java.net.CookieHandler;
 import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Embarcacao {
     private String tipo; //parametro
-    private HashMap<Integer,Cordenada> posicoes = new HashMap<>(); //criaçao de um objeto do tipo hashmap de nome posicoes, novo hashmap
+    private HashMap<Integer, Cordenada> posicoes = new HashMap<>(); //criaçao de um objeto do tipo hashmap de nome posicoes, novo hashmap
     private int forca; //parametro
 
     public Embarcacao(int x, int y, int tamanho , String tipo, boolean horizontal) { // construtor de ibjetos embarcaçao

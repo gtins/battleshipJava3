@@ -1,3 +1,6 @@
+import jogo.Cordenada;
+import jogo.Embarcacao;
+
 import java.util.LinkedList;
 
 public class Main {

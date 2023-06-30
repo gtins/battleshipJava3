@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67723aae-40cc-45a5-9082-ecc605d50c23" name="Changes" comment="reformulação completa do código">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cordenada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cordenada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Embarcacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Embarcacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Agua.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogo/Agua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cordenada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogo/Cordenada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Elemento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogo/Elemento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Embarcacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogo/Embarcacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688160545532</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="reformulação completa do código">
+      <created>1688161922652</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688161922652</updated>
+    </task>
+    <task id="LOCAL-00003" summary="reformulação completa do código">
+      <created>1688161972201</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688161972201</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

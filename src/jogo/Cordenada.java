@@ -1,3 +1,5 @@
+package jogo;
+
 public class Cordenada {
     private int x;
     private int y;
@@ -50,7 +52,7 @@ public class Cordenada {
 
     @Override
     public String toString() {
-        return "Cordenada{" +
+        return "jogo.Cordenada{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';

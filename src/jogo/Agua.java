@@ -1,3 +1,5 @@
+package jogo;
+
 public class Agua extends Elemento {
 
     Agua(int tamanho, int linha, int coluna, boolean horizontal){
