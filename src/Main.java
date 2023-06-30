@@ -1,7 +1,13 @@
+import jogo.Agua;
 import jogo.Cordenada;
+import jogo.Elemento;
 import jogo.Embarcacao;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -9,25 +15,64 @@ public class Main {
     private static LinkedList<Cordenada> jogadas = new LinkedList<>();//linkedlist do tipo cordenada e de nome jogadas, nova linkedlist
 
     public static void main(String[] args) {
-        embarcacoes = criar();//ta embaixo
+        String csvName = pedirNomeArquivo();
+        embarcacoes = criar( csvName);//ta embaixo
         mostrarNavios();//ta embaixo
         jogadas();//ta embaixo
         jogar();//ta embaixo
+        mostrarTabuleiro();
+        System.out.println("Afundados" + getTotalAfundados());
+    }
 
+    private static int getTotalAfundados() {
+        int contadorAfundados = 0;
+        for (Embarcacao elemento: embarcacoes) {
+            if(elemento.afundou()) {
+                contadorAfundados++;
+            }
+        }
+        return  contadorAfundados;
+    }
 
+    public static String getElemento(int x, int y) {
+        String posicao = "*";
+        for (Embarcacao elemento: embarcacoes) {
+            if( elemento.temPosicao(x,y) ) {
+                Cordenada c = elemento.getCordenada(x,y);
+                return c.getTipo();
+            }
+        }
+        return posicao;
+    }
+
+    private static void mostrarTabuleiro() {
+        for(int x = 0; x < 10; x++) {
+            for( int y = 0; y < 10; y++) {
+                System.out.print(getElemento(x,y) + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    private static String pedirNomeArquivo() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o nome do arquivo: ");
+        String csvFile = scanner.nextLine();
+        scanner.close();
+        String csvName = "src/" + csvFile + ".csv";
+        return csvName;
     }
 
     private static void jogar() {
         for( Cordenada cordenada : jogadas) { //vai varrer o jogadas
             atirarBarco(cordenada);//cada jogada é um tiro
-            mostrarNavios();//imprime os navios
         }
     }
 
     private static void jogadas() {//adiciona na linkedlist novos objetos do tipo cordenada, que por serem do construtor padrão tem x e y.
-        jogadas.add( new Cordenada(1,1));
-        jogadas.add( new Cordenada( 2, 1));
-        jogadas.add( new Cordenada(6,3));
+        jogadas.add( new Cordenada(5,3));
+        jogadas.add( new Cordenada( 9, 8));
+        jogadas.add( new Cordenada(9,9));
     }
 
     private static boolean atirarBarco(Cordenada c ) {//metodo atirar recebe uma variavel do tipo cordenada c
@@ -54,11 +99,31 @@ public class Main {
         }
     }
 
-    private static LinkedList<Embarcacao> criar() {
+    /**
+     * Le o arquivo
+     * @return as embarcacoes do meu jogo
+     */
+    private static LinkedList<Embarcacao> criar(String csvFile ) {
         LinkedList<Embarcacao> embarcacoes = new LinkedList<>(); // objeto do tipo linked list de nome embarcacoes, nova linked list
-        embarcacoes.add( new Embarcacao(1,1,5, "N",true) ); // adiciona na lista criada um novo objeto embarcaçao // DAQUI VAI PRA CLASSE EMBARCACAO PRA ENTENDER
-        embarcacoes.add( new Embarcacao(2,1,5, "N",false) );
-        embarcacoes.add( new Embarcacao(3,3,2, "s", true) );
+        String line;
+        String csvSplitBy = ",";
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+            while ((line = br.readLine()) != null) {
+                String[] items = line.split(csvSplitBy);
+
+                int linha = Integer.parseInt(items[0]);
+                int coluna = Integer.parseInt(items[1]);
+                int tamanho = Integer.parseInt(items[2]);
+                String tipo = items[3];
+                boolean orientacao = Boolean.parseBoolean(items[4]);
+
+                embarcacoes.add( new Embarcacao(linha,coluna, tamanho, tipo,orientacao) ); // adiciona na lista criada um novo objeto embarcaçao // DAQUI VAI PRA CLASSE EMBARCACAO PRA ENTENDER
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return embarcacoes;//retorna a lista ATUALIZADA de embarcacoes com todos os seus objetos ja criados
     }
+
 }

@@ -2,11 +2,11 @@ package jogo;
 
 public class Agua extends Elemento {
 
-    Agua(int tamanho, int linha, int coluna, boolean horizontal){
-        this.tamanho = tamanho;
+    public Agua(int x, int y, int tamanho , String tipo){
+        this.tamanho = 1;
         this.linha = linha;
         this.coluna = coluna;
-        this.horizontal = horizontal;
+        this.horizontal = false;
         this.acertos = 0;
         caractere = '*';
     }

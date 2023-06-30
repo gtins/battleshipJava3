@@ -4,7 +4,7 @@ import java.net.CookieHandler;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class Embarcacao {
+public class Embarcacao extends Elemento {
     private String tipo; //parametro
     private HashMap<Integer, Cordenada> posicoes = new HashMap<>(); //criaçao de um objeto do tipo hashmap de nome posicoes, novo hashmap
     private int forca; //parametro
@@ -17,7 +17,7 @@ public class Embarcacao {
     }
 
     private void posicionar(int x, int y, int tamanho, boolean horizontal) { //precisa de x, y tamanho e orientaçao
-        if(horizontal) {
+        if(! horizontal) {
             for (int i = 0; i < tamanho; i++) {
                 Cordenada cordenada = new Cordenada(x + i, y, tipo); //objeto do tipo cordenada de nome cordenada usa do construtor da cordenada IR PARA CORDENADA PARA ENTENDER
                 //IMPORTANTE, incremento no X afinal horizontal = eixo X
@@ -26,7 +26,7 @@ public class Embarcacao {
             }
         } else {
             for (int i = 0; i < tamanho; i++) {
-                Cordenada cordenada = new Cordenada(x, y + i); //mesma coisa só que com a logica inversa para a orientação inversa
+                Cordenada cordenada = new Cordenada(x, y + i,tipo); //mesma coisa só que com a logica inversa para a orientação inversa
                 //incremento no y afinal vertical = eixo y
                 posicoes.put(cordenada.hashCode(),cordenada);
             }
@@ -91,7 +91,24 @@ public class Embarcacao {
         return acertou;
     }
 
+    public boolean temPosicao(int x, int y) {//método acertar recebe valores x e y
+        Cordenada tiro = new Cordenada(x, y);//objeto do tipo cordenada de nome tipo, nova cordenada (com x e y do parametro acertou)
+        int chave = tiro.hashCode();
+        boolean tem = posicoes.containsKey(chave);
+        return tem;
+    }
+
+    public Cordenada getCordenada(int x, int y) {//método acertar recebe valores x e y
+        Cordenada pos = new Cordenada(x, y);//objeto do tipo cordenada de nome tipo, nova cordenada (com x e y do parametro acertou)
+        int chave = pos.hashCode();
+        return  posicoes.get(chave);
+    }
+
     public int getForca() {//getter da força
         return this.forca;
+    }
+
+    public boolean afundou() {
+        return forca == 0;
     }
 }
