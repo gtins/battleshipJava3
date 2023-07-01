@@ -16,6 +16,11 @@ public class ReceberJogadas extends Thread {
         this.cordenadas = cordenadas;
     }
     public void run() {
+        while( true )
+           ficarRecebendo();
+    }
+
+    private void ficarRecebendo() {
         try {
             // Criar o socket do servidor
             ServerSocket servidorSocket = new ServerSocket(portaServidor);

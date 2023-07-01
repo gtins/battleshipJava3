@@ -10,8 +10,9 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Batalha {
-    public String servidor = "192.168.0.100"; // Replace with the server IP address
-    public static final int PORT = 12345; // Replace with the server port number
+    public String servidor = "10.199.74.53"; // Replace with the server IP address
+    public static final int PORTA_RECEBER = 6000; // Replace with the server port number
+    public static final int PORTA_ENVIAR = 5000; // Replace with the server port number
 
     private  LinkedList<Embarcacao> embarcacoes;// objeto linkedlist do tipo embarcacao chamado de embarcacoes
     private  LinkedList<Cordenada> jogadasParaEnviar = new LinkedList<>();//linkedlist do tipo cordenada e de nome jogadas, nova linkedlist
@@ -24,7 +25,7 @@ public class Batalha {
 
     public void init() {
         iniciarTabuleiro();
-        ReceberJogadas receberJogadas = new ReceberJogadas(PORT, jogadasRecebidas );
+        ReceberJogadas receberJogadas = new ReceberJogadas(PORTA_RECEBER , jogadasRecebidas );
         receberJogadas.start();
     }
 
@@ -33,13 +34,14 @@ public class Batalha {
         embarcacoes = criar( csvName);//ta embaixo
         mostrarNavios();//ta embaixo
         jogadas();//ta embaixo
-        jogar();//ta embaixo
+
         mostrarTabuleiro();
         System.out.println("Afundados" + getTotalAfundados());
     }
 
     public void run() {
         init();
+        jogadas();//ta embaixo
     }
 
     private  int getTotalAfundados() {
@@ -95,7 +97,8 @@ public class Batalha {
         jogadasParaEnviar.add( new Cordenada(5,3));
         jogadasParaEnviar.add( new Cordenada( 9, 8));
         jogadasParaEnviar.add( new Cordenada(9,9));
-        EnviarJogadaServidor enviarJogadaServidor = new EnviarJogadaServidor(servidor, PORT);
+        jogadasParaEnviar.add( new Cordenada(3,4));
+        EnviarJogadaServidor enviarJogadaServidor = new EnviarJogadaServidor(servidor, PORTA_ENVIAR);
         for( Cordenada c : jogadasParaEnviar) {
             enviarJogadaServidor.executar(c.getX(), c.getY());
         }
