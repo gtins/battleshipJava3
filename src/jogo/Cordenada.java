@@ -1,6 +1,8 @@
 package jogo;
 
-public class Cordenada {
+import java.io.Serializable;
+
+public class Cordenada implements Serializable  {
     private int x;
     private int y;
     private String tipo;

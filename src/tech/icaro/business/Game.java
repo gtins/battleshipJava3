@@ -1,9 +1,9 @@
 //package tech.icaro.business;
 //
 //import tech.icaro.cli.CommandLineInterface;
-//import tech.icaro.network.Client;
+//import tech.icaro.network.network.Client;
 //import tech.icaro.network.Network;
-//import tech.icaro.network.Server;
+//import tech.icaro.network.network.Server;
 //
 //import java.io.IOException;
 //import java.util.Random;
@@ -22,13 +22,13 @@
 //    public Game(int port) {
 //        initialize();
 //        cli.printServerStartedInfo(port);
-//        network = new Server(port);
+//        network = new network.Server(port);
 //    }
 //
 //    public Game(String ip, int port) {
 //        initialize();
 //        cli.printClientStartedInfo(ip, port);
-//        network = new Client(ip, port);
+//        network = new network.Client(ip, port);
 //        cli.printConnectedInfo();
 //    }
 //
@@ -41,7 +41,7 @@
 //        Random random = new Random();
 //        int randomNumber = random.nextInt(6) + 1;
 //        String response;
-//        if (network instanceof Client) {
+//        if (network instanceof network.Client) {
 //            network.sendMessage(Integer.toString(randomNumber));
 //            this.position = network.receiveMessage();
 //        } else {

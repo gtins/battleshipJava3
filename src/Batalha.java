@@ -1,7 +1,7 @@
-import jogo.Agua;
 import jogo.Cordenada;
-import jogo.Elemento;
 import jogo.Embarcacao;
+import network.EnviarJogadaServidor;
+import network.ReceberJogadas;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,12 +9,26 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Main {
+public class Batalha {
+    public String servidor = "192.168.0.100"; // Replace with the server IP address
+    public static final int PORT = 12345; // Replace with the server port number
 
-    private static LinkedList<Embarcacao> embarcacoes;// objeto linkedlist do tipo embarcacao chamado de embarcacoes
-    private static LinkedList<Cordenada> jogadas = new LinkedList<>();//linkedlist do tipo cordenada e de nome jogadas, nova linkedlist
+    private  LinkedList<Embarcacao> embarcacoes;// objeto linkedlist do tipo embarcacao chamado de embarcacoes
+    private  LinkedList<Cordenada> jogadasParaEnviar = new LinkedList<>();//linkedlist do tipo cordenada e de nome jogadas, nova linkedlist
 
+    private  LinkedList<Cordenada> jogadasRecebidas = new LinkedList<>();
     public static void main(String[] args) {
+        Batalha batalha = new Batalha();
+        batalha.run();
+    }
+
+    public void init() {
+        iniciarTabuleiro();
+        ReceberJogadas receberJogadas = new ReceberJogadas(PORT, jogadasRecebidas );
+        receberJogadas.start();
+    }
+
+    private void iniciarTabuleiro() {
         String csvName = pedirNomeArquivo();
         embarcacoes = criar( csvName);//ta embaixo
         mostrarNavios();//ta embaixo
@@ -24,7 +38,11 @@ public class Main {
         System.out.println("Afundados" + getTotalAfundados());
     }
 
-    private static int getTotalAfundados() {
+    public void run() {
+        init();
+    }
+
+    private  int getTotalAfundados() {
         int contadorAfundados = 0;
         for (Embarcacao elemento: embarcacoes) {
             if(elemento.afundou()) {
@@ -34,7 +52,7 @@ public class Main {
         return  contadorAfundados;
     }
 
-    public static String getElemento(int x, int y) {
+    public  String getElemento(int x, int y) {
         String posicao = "*";
         for (Embarcacao elemento: embarcacoes) {
             if( elemento.temPosicao(x,y) ) {
@@ -45,7 +63,7 @@ public class Main {
         return posicao;
     }
 
-    private static void mostrarTabuleiro() {
+    private  void mostrarTabuleiro() {
         for(int x = 0; x < 10; x++) {
             for( int y = 0; y < 10; y++) {
                 System.out.print(getElemento(x,y) + " ");
@@ -54,28 +72,36 @@ public class Main {
         }
     }
 
-    private static String pedirNomeArquivo() {
+    private  String pedirNomeArquivo() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite o nome do arquivo: ");
         String csvFile = scanner.nextLine();
+        System.out.print("Digite o endereco do outro jogador (servidor): ");
+        servidor = scanner.nextLine();
+
         scanner.close();
         String csvName = "src/" + csvFile + ".csv";
         return csvName;
     }
 
-    private static void jogar() {
-        for( Cordenada cordenada : jogadas) { //vai varrer o jogadas
+    private  void jogar() {
+        for( Cordenada cordenada : jogadasParaEnviar) { //vai varrer o jogadas
             atirarBarco(cordenada);//cada jogada é um tiro
         }
     }
 
-    private static void jogadas() {//adiciona na linkedlist novos objetos do tipo cordenada, que por serem do construtor padrão tem x e y.
-        jogadas.add( new Cordenada(5,3));
-        jogadas.add( new Cordenada( 9, 8));
-        jogadas.add( new Cordenada(9,9));
+    private  void jogadas() {//adiciona na linkedlist novos objetos do tipo cordenada, que por serem do construtor padrão tem x e y.
+        // depois pode ser um system out e um scanner TODO
+        jogadasParaEnviar.add( new Cordenada(5,3));
+        jogadasParaEnviar.add( new Cordenada( 9, 8));
+        jogadasParaEnviar.add( new Cordenada(9,9));
+        EnviarJogadaServidor enviarJogadaServidor = new EnviarJogadaServidor(servidor, PORT);
+        for( Cordenada c : jogadasParaEnviar) {
+            enviarJogadaServidor.executar(c.getX(), c.getY());
+        }
     }
 
-    private static boolean atirarBarco(Cordenada c ) {//metodo atirar recebe uma variavel do tipo cordenada c
+    private  boolean atirarBarco(Cordenada c ) {//metodo atirar recebe uma variavel do tipo cordenada c
         boolean acertou = false;
         int indice = 0;
         int forca = 0;
@@ -92,7 +118,7 @@ public class Main {
         return acertou;//retorna variavel
     }
 
-    private static void mostrarNavios() { //imprimir do codigo antigo basicamente só que em "lego"
+    private  void mostrarNavios() { //imprimir do codigo antigo basicamente só que em "lego"
         for (Embarcacao elemento: embarcacoes
         ) {
             System.out.println(elemento + " Forca " + elemento.getForca() + elemento.getPosicoes());
@@ -103,7 +129,7 @@ public class Main {
      * Le o arquivo
      * @return as embarcacoes do meu jogo
      */
-    private static LinkedList<Embarcacao> criar(String csvFile ) {
+    private  LinkedList<Embarcacao> criar(String csvFile ) {
         LinkedList<Embarcacao> embarcacoes = new LinkedList<>(); // objeto do tipo linked list de nome embarcacoes, nova linked list
         String line;
         String csvSplitBy = ",";
