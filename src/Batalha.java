@@ -18,6 +18,7 @@ public class Batalha {
     private  LinkedList<Cordenada> jogadasParaEnviar = new LinkedList<>();//linkedlist do tipo cordenada e de nome jogadas, nova linkedlist
 
     private  LinkedList<Cordenada> jogadasRecebidas = new LinkedList<>();
+    private Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         Batalha batalha = new Batalha();
         batalha.run();
@@ -81,7 +82,6 @@ public class Batalha {
         System.out.print("Digite o endereco do outro jogador (servidor): ");
         servidor = scanner.nextLine();
 
-        scanner.close();
         String csvName = "src/" + csvFile + ".csv";
         return csvName;
     }
@@ -94,14 +94,17 @@ public class Batalha {
 
     private  void jogadas() {//adiciona na linkedlist novos objetos do tipo cordenada, que por serem do construtor padrão tem x e y.
         // depois pode ser um system out e um scanner TODO
-        jogadasParaEnviar.add( new Cordenada(5,3));
-        jogadasParaEnviar.add( new Cordenada( 9, 8));
-        jogadasParaEnviar.add( new Cordenada(9,9));
-        jogadasParaEnviar.add( new Cordenada(3,4));
+        Scanner localScanner = new Scanner(System.in);
+        System.out.printf("Digite coordenada X: ");
+        int x = Integer.parseInt(this.scanner.nextLine());
+        System.out.printf("Digite coordenada Y: ");
+        int y = Integer.parseInt(this.scanner.nextLine());
+        jogadasParaEnviar.add( new Cordenada(x,y));
         EnviarJogadaServidor enviarJogadaServidor = new EnviarJogadaServidor(servidor, PORTA_ENVIAR);
         for( Cordenada c : jogadasParaEnviar) {
             enviarJogadaServidor.executar(c.getX(), c.getY());
         }
+        localScanner.close();
     }
 
     private  boolean atirarBarco(Cordenada c ) {//metodo atirar recebe uma variavel do tipo cordenada c
