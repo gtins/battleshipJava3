@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67723aae-40cc-45a5-9082-ecc605d50c23" name="Changes" comment="glauco em ação">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_06_2023_18_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_06_2023_18_29__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Batalha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Batalha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/network/ReceberJogadas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/ReceberJogadas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/Embarcacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogo/Embarcacao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2RwTuVRL9GHikYTuA9GqBihz6H1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,11 +38,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Ícaro/IdeaProjects/teste",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -77,6 +77,7 @@
       <updated>1688160366706</updated>
       <workItem from="1688171037751" duration="2159000" />
       <workItem from="1688173265847" duration="503000" />
+      <workItem from="1688341959701" duration="4609000" />
     </task>
     <task id="LOCAL-00001" summary="reformulação completa do código">
       <created>1688160545532</created>
