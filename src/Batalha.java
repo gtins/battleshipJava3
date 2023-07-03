@@ -80,7 +80,7 @@ public class Batalha {
         System.out.print("Digite o nome do arquivo: ");
         String csvFile = scanner.nextLine();
         System.out.print("Digite o endereco do outro jogador (IP): \n");
-        servidor = "10.199.74.53";
+        servidor = "10.199.74.53"; // aqui tem que ter um scanner dps pra pedir o IP
 
         String csvName = "src/" + csvFile + ".csv";
         return csvName;

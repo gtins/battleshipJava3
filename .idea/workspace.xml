@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67723aae-40cc-45a5-9082-ecc605d50c23" name="Changes" comment="glauco em ação">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_06_2023_18_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_06_2023_18_29__Changes_.xml" afterDir="false" />
+    <list default="true" id="67723aae-40cc-45a5-9082-ecc605d50c23" name="Changes" comment="Ip Automatico sem loop com tabuleiro  e scanners funcionando">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Batalha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Batalha.java" afterDir="false" />
     </list>
@@ -86,7 +83,7 @@
       <workItem from="1688171037751" duration="2159000" />
       <workItem from="1688173265847" duration="503000" />
       <workItem from="1688341959701" duration="4609000" />
-      <workItem from="1688423545967" duration="1020000" />
+      <workItem from="1688423545967" duration="1438000" />
     </task>
     <task id="LOCAL-00001" summary="reformulação completa do código">
       <created>1688160545532</created>
@@ -130,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688170655488</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="glauco em ação">
+      <option name="closed" value="true" />
+      <created>1688424591775</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688424591775</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reformulação completa do código" />
-    <MESSAGE value="glauco em ação" />
-    <option name="LAST_COMMIT_MESSAGE" value="glauco em ação" />
+    <MESSAGE value="Ip Automatico sem loop com tabuleiro  e scanners funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ip Automatico sem loop com tabuleiro  e scanners funcionando" />
   </component>
 </project>
