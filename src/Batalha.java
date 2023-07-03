@@ -11,8 +11,8 @@ import java.util.Scanner;
 
 public class Batalha {
     public String servidor = "10.199.74.53"; // Replace with the server IP address
-    public static final int PORTA_RECEBER = 6000; // Replace with the server port number
-    public static final int PORTA_ENVIAR = 5000; // Replace with the server port number
+    public static final int PORTA_RECEBER = 5000; // Replace with the server port number
+    public static final int PORTA_ENVIAR = 6000; // Replace with the server port number
 
     private  LinkedList<Embarcacao> embarcacoes;// objeto linkedlist do tipo embarcacao chamado de embarcacoes
     private  LinkedList<Cordenada> jogadasParaEnviar = new LinkedList<>();//linkedlist do tipo cordenada e de nome jogadas, nova linkedlist
@@ -37,7 +37,7 @@ public class Batalha {
         jogadas();//ta embaixo
 
         mostrarTabuleiro();
-        System.out.println("Afundados" + getTotalAfundados());
+        System.out.println("Afundados: " + getTotalAfundados());
     }
 
     public void run() {
@@ -56,7 +56,7 @@ public class Batalha {
     }
 
     public  String getElemento(int x, int y) {
-        String posicao = "*";
+        String posicao = "□";
         for (Embarcacao elemento: embarcacoes) {
             if( elemento.temPosicao(x,y) ) {
                 Cordenada c = elemento.getCordenada(x,y);
@@ -79,8 +79,8 @@ public class Batalha {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite o nome do arquivo: ");
         String csvFile = scanner.nextLine();
-        System.out.print("Digite o endereco do outro jogador (servidor): ");
-        servidor = scanner.nextLine();
+        System.out.print("Digite o endereco do outro jogador (IP): \n");
+        servidor = "10.199.74.53";
 
         String csvName = "src/" + csvFile + ".csv";
         return csvName;
@@ -94,12 +94,16 @@ public class Batalha {
 
     private  void jogadas() {//adiciona na linkedlist novos objetos do tipo cordenada, que por serem do construtor padrão tem x e y.
         // depois pode ser um system out e um scanner TODO
+
         Scanner localScanner = new Scanner(System.in);
-        System.out.printf("Digite coordenada X: ");
+        System.out.printf("Hora do ataque, onde você quer lançar o torpedo?");
+        System.out.printf("\nDigite coordenada X: ");
         int x = Integer.parseInt(this.scanner.nextLine());
         System.out.printf("Digite coordenada Y: ");
         int y = Integer.parseInt(this.scanner.nextLine());
+
         jogadasParaEnviar.add( new Cordenada(x,y));
+
         EnviarJogadaServidor enviarJogadaServidor = new EnviarJogadaServidor(servidor, PORTA_ENVIAR);
         for( Cordenada c : jogadasParaEnviar) {
             enviarJogadaServidor.executar(c.getX(), c.getY());
@@ -108,6 +112,7 @@ public class Batalha {
     }
 
     private  boolean atirarBarco(Cordenada c ) {//metodo atirar recebe uma variavel do tipo cordenada c
+
         boolean acertou = false;
         int indice = 0;
         int forca = 0;
@@ -130,7 +135,6 @@ public class Batalha {
             System.out.println(elemento + " Forca " + elemento.getForca() + elemento.getPosicoes());
         }
     }
-
     /**
      * Le o arquivo
      * @return as embarcacoes do meu jogo
