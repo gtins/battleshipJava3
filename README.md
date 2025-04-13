@@ -1,3 +1,37 @@
+# Batalha Naval em Java — Versão Final
+
+Esta é a versão final e mais completa do projeto **Batalha Naval** em Java, agora com **suporte a rede local** para múltiplos jogadores.
+
+---
+
+## Objetivo
+
+Desenvolver uma versão do clássico jogo Batalha Naval com:
+
+- Suporte a dois jogadores em rede local (servidor e cliente)
+- Tabuleiro 10x10
+- Frota completa com diferentes tipos de embarcação
+- Mecânica de turnos, tiros, acertos e afundamentos
+
+---
+
+## Mudanças
+
+- Implementação de **servidor de rede local** para conectar jogadores
+- Código refeito e organizado do zero com foco em clareza e manutenção
+- Estrutura de jogo mais próxima de um produto final jogável
+
+---
+
+## Tipos de Embarcação
+
+- Porta-aviões (P) – 5 posições
+- Navios-tanque (N) – 4 posições
+- Contra-torpedeiros (C) – 3 posições
+- Submarinos (S) – 2 posições
+
+---
+
 # A Batalha Naval
 <h2>Atividade para desenvolver em java, com servidor de rede de host local.</h2>
 
